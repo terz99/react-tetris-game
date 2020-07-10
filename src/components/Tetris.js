@@ -1,12 +1,16 @@
 import React from "react";
+
+// Components
 import Stage from "./Stage";
 import Display from "./Display";
 import StartButton from "./StartButton";
 import {createStage} from "../utils/gameHelpers";
+import {StyledTetris, StyledTetrisWrapper} from "./styles/StyledTetris";
 
 function Tetris(props) {
   return (
-    <div>
+    <StyledTetrisWrapper>
+      <StyledTetris>
       <Stage stage={createStage()}/>
       <aside>
         <div>
@@ -14,9 +18,10 @@ function Tetris(props) {
           <Display text={"Rows"}/>
           <Display text={"Level"}/>
         </div>
-        <StartButton/>
+        <StartButton callback={() => console.log("clicked")}/>
       </aside>
-    </div>
+      </StyledTetris>
+    </StyledTetrisWrapper>
   );
 }
 
