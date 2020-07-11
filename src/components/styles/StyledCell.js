@@ -8,4 +8,7 @@ export const StyledCell = styled.div`
   border-right-color: rgba(${props => props.color}, 1);
   border-top-color: rgba(${props => props.color}, 1);
   border-left-color: rgba(${props => props.color}, 0.3);
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000;
 `;
