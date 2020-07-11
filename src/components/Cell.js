@@ -3,6 +3,7 @@ import {StyledCell} from "./styles/StyledCell";
 import {TETROMINOS} from "../utils/tetrominos";
 
 function Cell(props) {
+  console.log("rerender");
   return (
     <StyledCell
       type={props.type}
@@ -10,4 +11,4 @@ function Cell(props) {
   );
 }
 
-export default Cell;
+export default React.memo(Cell);
